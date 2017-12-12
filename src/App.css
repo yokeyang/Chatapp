@@ -1,0 +1,9 @@
+html{
+  overflow-x:hidden;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.App {
+  text-align: center;
+}
