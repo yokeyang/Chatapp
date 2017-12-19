@@ -8,7 +8,7 @@
   "proxy": "http://localhost:3001/",
   "devDependencies": {
     "electron-packager": "^9.1.0",
-    "react-scripts": "1.0.16",
+    "react-scripts": "^1.0.16",
     "socket.io": "^2.0.4"
   },
   "dependencies": {
