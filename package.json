@@ -1,8 +1,7 @@
 {
-  "name": "Chatapp",
+  "name": "chatapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
   "DEV": true,
   "main": "main.js",
   "proxy": "http://localhost:3001/",
@@ -17,6 +16,7 @@
     "electron": "^1.7.9",
     "material-ui": "^1.0.0-beta.19",
     "material-ui-icons": "^1.0.0-beta.17",
+    "morgan": "^1.9.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
@@ -27,5 +27,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "首先下载下压缩包，解压",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yokeyang/Chatapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yokeyang/Chatapp/issues"
+  },
+  "homepage": "https://github.com/yokeyang/Chatapp#readme"
 }

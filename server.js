@@ -3,12 +3,13 @@ var app = express()
 var server = require('http').Server(app)
 var io = require('socket.io')(server)
 var bodyParser = require('body-parser')
+const path = require('path')
 server.listen(3002)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: false
 }));
-app.use(express.static('./public'));
+app.use(express.static(path.resolve(__dirname, '.', 'build')));
 app.use(express.static('./node_modules'));
 app.use((req,res,next)=>{
   res.header('Access-Control-Allow-origin','http://localhost:5001');
@@ -22,6 +23,11 @@ var user = [
   {name:'Peter',psd:'1234'},
   {name:'Anna',psd:'12345'}
 ]
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '.', 'build', 'index.html'));
+})
+
 app.post('/login',(req,res)=>{
   var name = req.body.name
   var psd = req.body.psd
